@@ -1,17 +1,55 @@
-int float
+struct  A {
+  int numi;
+  float numf;
+  double numd; 
+  char caract;
+} a;
 
-if else while
+void impresion( mensaje ){
+  int bandera = 0;
+  do{
+    if( mensaje ){
+      print( mensaje );
+      bandera = 1 ;
+    }else{
+      print( "no hay mensaje para imprimir" );
+      scan( mensaje );
+    }
+  }while( mensaje )
+} 
 
-12345f 1.2e6d
 
-; , ()
+int main(){
+  float a = 118, b = 125.02F, c = 120.254, r1;
+  double  d = 145.20d, e = 119.02, r2;
+  int f = 5, g = 0, h = 2 r3;
+  char x = 'akkkkk';
 
-9.02e+12
+  if( b < c )
+    r1 = b + c;
+  
+  if( b >= c)
+    r1 = b - c;
 
-31.01
+  if( d <= e )
+    r2 = d * e;
+  
+  if( d > e )
+    r2 =  d / e;
 
-aux_0
+  if( d == e )
+    print( "numero iguales" );
+  
+  if ( d != e )
+    print( "numero diferentes" );
 
-if ( aux_1 )
+  if ( f && h )
+    r3 = f + h;
+  
+  if ( f || h )
+    r3 = f * h;
 
-5if %
+  if ( !g )
+    print( "el numero es 0" );
+
+}
