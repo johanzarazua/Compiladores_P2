@@ -16,23 +16,26 @@ using namespace std;
 %option noyywrap
 %option case-insensitive
 
+CARACTERI [']([^'])+[']
 ENTERO [0-9]+
-FLOTANTE [0-9]*\.[0-9]+([Ee][+-]?[0-9]+)?
+FLOTANTE [0-9]*\.[0-9]+([Ee][+-]?[0-9]+)?[f]?
+DOUBLE [0-9]*\.[0-9]+([Ee][+-]?[0-9]+)?[d]
 ID [A-Za-z_][A-Za-z0-9_]*
 ESP [ \t\n\r]
 CADENA ["]([^"\\\n]|\\.|\\\n)*["]
+CARACTER [']([^']){1}[']
 
 %%
 
-"int"   { return INT;}
-"float" { return FLOAT;}
+"int"      { return INT;}
+"float"    { return FLOAT;}
 "char"     { return CHAR;}
 "double"   { return DOUBLE;}
 "struct"   { return STRUCT;}
 "void"     { return VOID;}
-"else"  { return ELSE;}
-"if"    { return IF;}
-"while" { return WHILE;}
+"else"     { return ELSE;}
+"if"       { return IF;}
+"while"    { return WHILE;}
 "do"       { return DO;}
 "print"    { return PRINT;}
 "scan"     { return SCAN;}
@@ -61,10 +64,13 @@ CADENA ["]([^"\\\n]|\\.|\\\n)*["]
 "."        { return PUNTO;}
 
 {ENTERO}   { return NUMERO;}
-{FLOTANTE} { return NUMERO;}
+{FLOTANTE} { return NUMEROF;}
+{DOUBLE}   { return NUMEROD;}
 {CADENA}   { return CADENA;}
-{ID} {return ID;}
-{ESP} {}
+{CARACTER} { return CARACT;}
+{CARACTERI} { cout<<"ERROR LEXICO"<<yytext<<endl;}
+{ID}       {return ID;}
+{ESP}      {}
 
 
 .    { cout<<"ERROR LEXICO "<<yytext<<endl;}   //Cualquier caracter excepto salto de linea
