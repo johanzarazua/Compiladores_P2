@@ -17,7 +17,7 @@ using namespace std;
 %option case-insensitive
 
 ENTERO [0-9]+
-FLOTANTE [0-9]*\.[0-9]+([Ee][+-]?[0-9]+)?(f)?
+FLOTANTE [0-9]*\.[0-9]+([Ee][+-]?[0-9]+)?
 ID [A-Za-z_][A-Za-z0-9_]*
 ESP [ \t\n\r]
 CADENA ["]([^"\\\n]|\\.|\\\n)*["]
