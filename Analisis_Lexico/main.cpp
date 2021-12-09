@@ -1,0 +1,26 @@
+#include <iostream>
+#include <fstream>
+#include "Scanner.h"
+
+using namespace std;
+
+int main(int argc, char *argv[]){
+  if(argc < 2){
+    cout << "Faltan argumentos" << endl;
+    return -1;
+  }
+
+  filebuf fb;
+  fb.open(string(argv[1]), ios::in);
+  istream in(&fb);
+  C_1::Scanner lexer(&in);
+  int token = lexer.yylex();
+
+  while (token != 0){
+    cout << token << ", " << lexer.YYText() << endl;
+    token = lexer.yylex();
+  }
+
+  fb.close();
+  return 0;
+}
