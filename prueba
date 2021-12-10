@@ -18,7 +18,6 @@ void impresion( mensaje ){
   }while( mensaje )
 } 
 
-
 int main(){
   float a = 118, b = 125.02F, c = 120.254, r1, z = 10E2F;
   double  d = 145.20d, e = 119.02, r2, y = 125E-2;
