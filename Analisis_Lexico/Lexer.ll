@@ -16,6 +16,7 @@ using namespace std;
 %option noyywrap
 %option case-insensitive
 
+
 ENTERO [0-9]+
 FLOTANTE [0-9]*\.[0-9]+([Ee][+-]?[0-9]+)?
 ID [A-Za-z_][A-Za-z0-9_]*
