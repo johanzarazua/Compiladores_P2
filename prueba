@@ -22,7 +22,7 @@ int main(){
   float a = 118, b = 125.02F, c = 120.254, r1, z = 10E2F;
   double  d = 145.20d, e = 119.02, r2, y = 125E-2;
   int f = 5, g = 0, h = 2 r3;
-  char x = 'akkkkk';
+  char x = 'akkkkk', x1 = 'a';
 
   if( b < c )
     r1 = b + c;
@@ -50,5 +50,7 @@ int main(){
 
   if ( !g )
     print( "el numero es 0" );
+
+  return 0;
 
 }
