@@ -11,9 +11,11 @@ echo "Moviendose al directorio de ejecucion => " ${path}
 cd ${path}
 
 #se compila el archivo Flex para generar Scanner.cpp
+echo "Compilando archivo Flex..."
 flex Lexer.ll
 
 #se compilan los archivos necesarios para el proyecto
+echo "Ejecutando prueba"
 g++ main.cpp Scanner.cpp -o scanner
 
 #ejecuta el proyecto

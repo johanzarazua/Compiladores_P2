@@ -40,4 +40,7 @@ const int PUNTO   = 36;
 const int NUMERO  = 37;
 const int ESP     = 38;
 const int CADENA  = 39;
+const int CARACT  = 40;
+const int NUMEROF = 371;
+const int NUMEROD = 372;
 #endif
