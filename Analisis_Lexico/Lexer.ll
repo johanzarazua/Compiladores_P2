@@ -16,7 +16,6 @@ using namespace std;
 %option noyywrap
 %option case-insensitive
 
-
 CARACTERI [']([^'])+[']
 ENTERO [0-9]+
 FLOTANTE [0-9]*\.[0-9]+([Ee][+-]?[0-9]+)?[fF]|[0-9]+[Ee][+-]?[0-9]+[fF]
